@@ -1,0 +1,75 @@
+body {
+  background-image: url('../Components/Icons/Lobby.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: serif;
+}
+.login-container {
+  max-width: 400px;
+  margin: 120px auto;
+  padding: 25px;
+  border: 2px solid #ffc800;
+  border-radius: 18px;
+  font-family: serif;
+  background: linear-gradient(to bottom, #996633, #c96603);
+}
+.login-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  height: auto;
+}
+h2 {
+  text-align: center;
+  color: #161616;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.form-group input:focus {
+  border-color: #161616;
+  outline: none;
+}
+.form-group input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 10px;
+  border: 3px solid #ffc800;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #161616;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+.login-logo{
+  margin: none;
+  width: 100px;
+  height: auto;
+  left: auto;
+}
+.form-group input[type="text"]::placeholder,
+.form-group input[type="password"]::placeholder {
+  color: #444444;
+  font-weight: bold;
+}
+
+.login-button {
+  display: block;
+  margin: 20px auto;
+  position: center;
+  margin: 20px 70px;
+  text-align: center;
+  width: 50%;
+  padding: 8px 10px;
+  background-color: #212121;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color:#996633;
+  border: #070707 1px solid;
+}
