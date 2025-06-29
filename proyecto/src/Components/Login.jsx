@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { URL_USUARIOS } from "./Constants/endpoints";
+import { URL_USUARIOS } from "../Constants/Endpoints";
 import { useNavigate } from "react-router-dom";
-import { HOME } from "../Routers/Router";
+import { HOME } from "../Routers/router";
 import "../CSS/Login.css";
 
 function Login() {

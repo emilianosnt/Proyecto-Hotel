@@ -1,6 +1,6 @@
 import Home from "./Pages/Home";
 import {Routes, Route, BrowserRouter} from "react-router-dom";
-import {HOME, LOGIN, VIEW, EDITAR, CREAR} from "./Routers/Router";
+import {HOME, LOGIN, VIEW, EDITAR, CREAR} from "./Routers/router";
 
 import LoginPage from "./Pages/LoginPage";
 import ViewPage from "./Pages/ViewPage";

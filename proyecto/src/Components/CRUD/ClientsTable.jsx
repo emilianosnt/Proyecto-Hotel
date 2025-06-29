@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Container, Form, Table, Alert } from 'react-bootstrap';
 import axios from 'axios';
-import { URL_CLIENTES } from '../Constants/endpoints.js';
+import { URL_CLIENTES } from '../../Constants/endpoints.js';
 import { useNavigate } from 'react-router-dom';
 
 const initialRoomsData = [
