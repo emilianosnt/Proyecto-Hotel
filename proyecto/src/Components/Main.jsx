@@ -1,12 +1,11 @@
 import React from "react";
-import "../CSS/Main.css"; // Importa el archivo CSS
+import "../CSS/Main.css";
 
 const Main = () => {
   return (
     <div className="container">
       <div className="header">
         <h1>HOTEL CALIFORNIA</h1>
-        <p>Descubre todos nuestros servicios y espacios únicos</p>
       </div>
 
       <div className="tarjetas-grid">
@@ -32,7 +31,6 @@ const Main = () => {
             </div>
             <div className="tarjeta-info">
               <span className="horario">6:00 - 22:00</span>
-              <button className="btn-info">Más Info</button>
             </div>
           </div>
         </div>
@@ -60,7 +58,6 @@ const Main = () => {
                 </div>
                 <div className="tarjeta-info">
                     <span className="horario">7:00 - 23:00</span>
-                    <button className="btn-info">Ver Menú</button>
                 </div>
             </div>
           </div>
@@ -89,7 +86,6 @@ const Main = () => {
                 </div>
                 <div className="tarjeta-info">
                     <span className="horario">8:00 - 20:00</span>
-                    <button className="btn-info">Más Info</button>
                 </div>
             </div>
           </div>
@@ -119,7 +115,6 @@ const Main = () => {
                 </div>
                 <div className="tarjeta-info">
                     <span className="horario">24 horas</span>
-                    <button className="btn-info">Contacto</button>
                 </div>
             </div>
           </div>
@@ -149,7 +144,6 @@ const Main = () => {
                 </div>
                 <div className="tarjeta-info">
                     <span className="horario">5:00 - 23:00</span>
-                    <button className="btn-info">Rutinas</button>
                 </div>
             </div>
           </div>
@@ -180,7 +174,6 @@ const Main = () => {
             </div>
             <div className="tarjeta-info">
               <span className="horario">24 horas</span>
-              <button className="btn-info">Servicios</button>
             </div>
           </div>
         </div>

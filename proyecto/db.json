@@ -1,5 +1,5 @@
 {
-    "clientes": [
+    "clients": [
         {
             "id": 1,
             "name": "Carlos Perez",
@@ -17,7 +17,7 @@
         }
     ],
 
-    "usuarios": [
+    "users": [
         {
             "id": 1,
             "username": "admin",
@@ -25,17 +25,17 @@
         },
         {
             "id": 2,
-            "username": "user1",
-            "password": "user123"
+            "username": "blas",
+            "password": "blas123"
         },
         {
             "id": 3,
-            "username": "user2",
-            "password": "user456"
+            "username": "emi",
+            "password": "emi123"
         }
     ],
 
-    "Habitaciones": [
+    "rooms": [
         {
             "id": 1,
             "name": "Habitación 1",
