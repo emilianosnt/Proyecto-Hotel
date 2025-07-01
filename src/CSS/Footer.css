@@ -1,0 +1,144 @@
+
+.footer {
+  background-color: black;
+  color: rgba(243, 239, 234, 0.993);
+  width: 100%;
+}
+
+.footer-banner {
+  background-color: #FFD700;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer-content {
+  padding: 10px 10px;
+}
+
+/* Sección del mapa y el pasillo */
+.media-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap; /* para estén en la misma línea */
+  gap: 40px;
+  padding: 15px;
+ 
+}
+
+.footer-pasillo ,
+.map-section {
+  flex: 1 ;
+  max-width: 50%;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 60px;/*del mapa */
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+}
+.footer-pasillo {
+  width: 100%;
+  height: 500px;
+  border-radius: 60px;
+  overflow: hidden; /* Importante */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.footer-pasillo img {
+  width: 100%;/*  recorte  + y - */
+  height: 100%;
+  object-fit: cover; 
+  display: block;    /* Evita espacios */
+
+ }
+/* Resto del footer */
+.footer-contact {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+  text-align: center;
+
+}
+
+.footer-socials {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-socials a {
+  color: rgb(250, 246, 240);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #FFD700;
+  transform: scale(1.2);
+}
+
+.footer-layout {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.footer-copyright {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.galeria {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px; /* espacio entre imágenes */
+  padding: 5px;
+  scroll-behavior: smooth;
+}
+
+.galeria img {
+  height: 250px; /* alto de imágenes*/
+  width: 400px;  /* ancho  de imágenes*/
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 10px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+/* Efecto de agrandamiento al pasar el mouse */
+.galeria img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1); /* opcional: ilumina un poco */
+}
+.galeria {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(75, 67, 67, 0.822) transparent; /* Firefox */
+  overflow-x: auto;
+  overflow-y: hidden; /* Oculta la barra vertical */
+}
+
+.galeria::-webkit-scrollbar {
+  height: 8px; /* Altura de la barra horizontal */
+}
+
+.galeria::-webkit-scrollbar-track {
+  background: transparent; /* Fondo de la pista */
+}
+
+.galeria::-webkit-scrollbar-thumb {
+  background-color: rgb(56, 51, 51); /* Color de la barra */
+  border-radius: 4px;
+}
