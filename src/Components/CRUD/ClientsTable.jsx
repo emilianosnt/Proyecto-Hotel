@@ -19,7 +19,7 @@ const initialRoomsData = [
   { id: 12, name: "Habitacion 12", beds: 5, doubleBed: 0, singleBed: 5, isOccupied: false },
 ];
 
-const RoomAssigner = () => {
+const ClientsTable = () => {
   const navigate = useNavigate();
 
   // → Inicializa desde LocalStorage si existe, o desde el array original
@@ -128,7 +128,7 @@ const RoomAssigner = () => {
     try {
       const response = await axios.post(URL_CLIENTES, cliente);
       if (response) {
-        navigate('/home');
+        navigate('/clients'); // Redirige a la página de inicio
       }
     } catch (error) {
       console.error('Error al crear el cliente:', error);
@@ -256,6 +256,7 @@ const RoomAssigner = () => {
             value={cliente.adults}
             onChange={handleClientChange}
             placeholder="Cantidad de adultos"
+            readOnly
           />
         </Form.Group>
 
@@ -267,6 +268,7 @@ const RoomAssigner = () => {
             value={cliente.children}
             onChange={handleClientChange}
             placeholder="Cantidad de niños"
+            readOnly
           />
         </Form.Group>
 
@@ -278,6 +280,7 @@ const RoomAssigner = () => {
             value={cliente.room}
             onChange={handleClientChange}
             placeholder="Nombre o número de habitación"
+            readOnly
           />
         </Form.Group>
 
@@ -316,4 +319,4 @@ const RoomAssigner = () => {
   );
 };
 
-export default RoomAssigner;
+export default ClientsTable;

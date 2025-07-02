@@ -1,9 +1,9 @@
-import React from 'react'
+import ViewTable from "../Components/CRUD/ViewTable"
 
 const ViewPage = () => {
   return (
     <div>
-      
+      <ViewTable />
     </div>
   )
 }
