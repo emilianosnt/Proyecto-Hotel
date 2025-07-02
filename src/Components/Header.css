@@ -1,6 +1,6 @@
 .Header {
-  background-color: #000; /* Fondo negro */
-  color: rgb(238, 220, 220);  /* Texto blanco */
+  background-color: #000; 
+  color: rgb(235, 144, 69);  
   display: flex;
   justify-content: space-between;
   align-items: center;

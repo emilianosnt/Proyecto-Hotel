@@ -4,6 +4,7 @@ import './Footer.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaWhatsapp } from 'react-icons/fa';
 
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -19,29 +20,30 @@ const Footer = () => {
       </div>
         
         <div className="footer-content">
-  <div className="media-section">
-    <div className="footer-pasillo">
-      <h2 style={{ textAlign: 'center' }}></h2>
-      <img
+       <div className="media-section">
+       <div className="footer-pasillo">
+          <h2 style={{ textAlign: 'center' }}></h2>
+       <img
         width="100%"
         height="500"
         src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_213,w_3000,h_1687,r_0,c_crop,q_80,fl_progressive/w_910,f_auto,c_fit/hotel-southern-star-mysuru/Mysore_Hotel_New_Photographs_(4)"
-      />
-    </div>
-   <div className="map-section">
-      <h2 style={{ textAlign: 'center' }}>Ubicación</h2>
-      <br />
+       />
+        </div>
+       <div className="map-section">
+       <h2 style={{ textAlign: 'center' }}>Ubicación</h2>
+       <br />
+
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0123456789!2d-65.227654321!3d-26.823456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9424a123456789ab%3A0xcdef0123456789ab!2sSan+Miguel+de+Tucum%C3%A1n%2C+Tucum%C3%A1n%2C+Argentina!5e0!3m2!1ses!2sus!4v1234567890123!5m2!1ses!2sus"
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         width="100%"
-        height="500"
-      ></iframe>
-    </div>
-  </div>
-</div>
+        height="400"
+       ></iframe>
+       </div>
+      </div>
+     </div>
 
 
 
