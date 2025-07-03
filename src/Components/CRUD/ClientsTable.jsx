@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { Button, Container, Form, Table } from 'react-bootstrap';
-import axios from 'axios';
-import { URL_CLIENTES } from '../Constants/EndPoint.js';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { Button, Container, Form } from "react-bootstrap";
+import axios from "axios";
+import { URL_CLIENTES } from "../Constants/EndPoint.js";
+import { useNavigate } from "react-router-dom";
+import RoomsTable from "./RoomsTable";
 
 const initialRoomsData = [
   { id: 1, name: "Habitacion 1", doubleBed: 1, singleBed: 2, isOccupied: false },
@@ -23,19 +24,19 @@ const ClientsTable = () => {
   const navigate = useNavigate();
 
   const [rooms, setRooms] = useState(() => {
-    const saved = localStorage.getItem('rooms');
+    const saved = localStorage.getItem("rooms");
     return saved ? JSON.parse(saved) : initialRoomsData;
   });
 
   const [cliente, setCliente] = useState({
-    nombre: '',
-    dni: '',
-    email: '',
-    celular: '',
+    nombre: "",
+    dni: "",
+    email: "",
+    celular: "",
     adults: 0,
     children: 0,
     persons: 0,
-    room: '',
+    room: "",
   });
 
   const handleChange = (e) => {
@@ -48,18 +49,16 @@ const ClientsTable = () => {
 
   const assignRoom = () => {
     const totalPeople = cliente.adults + cliente.children;
-    const room = rooms.find(r => !r.isOccupied && (r.doubleBed * 2 + r.singleBed) >= totalPeople);
+    const room = rooms.find(
+      (r) => !r.isOccupied && r.doubleBed * 2 + r.singleBed >= totalPeople
+    );
 
     if (room) {
-      setRooms(
-        rooms.map(r => r.id === room.id ? { ...r, isOccupied: true } : r)
+      const updatedRooms = rooms.map((r) =>
+        r.id === room.id ? { ...r, isOccupied: true } : r
       );
-      localStorage.setItem(
-        'rooms',
-        JSON.stringify(
-          rooms.map(r => r.id === room.id ? { ...r, isOccupied: true } : r)
-        )
-      );
+      setRooms(updatedRooms);
+      localStorage.setItem("rooms", JSON.stringify(updatedRooms));
       setCliente({
         ...cliente,
         persons: totalPeople,
@@ -76,7 +75,7 @@ const ClientsTable = () => {
     try {
       const response = await axios.post(URL_CLIENTES, cliente);
       if (response) {
-        navigate('/clients');
+        navigate("/clients");
       }
     } catch (error) {
       console.error(error);
@@ -176,31 +175,8 @@ const ClientsTable = () => {
       </Form>
 
       <hr className="my-4" />
-      <h3>Habitaciones</h3>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Camas Dobles</th>
-            <th>Camas Simples</th>
-            <th>Total Camas</th>
-            <th>Ocupada</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rooms.map(r => (
-            <tr key={r.id} style={{ backgroundColor: r.isOccupied ? "#fdd" : undefined }}>
-              <td>{r.id}</td>
-              <td>{r.name}</td>
-              <td>{r.doubleBed}</td>
-              <td>{r.singleBed}</td>
-              <td>{r.doubleBed * 2 + r.singleBed}</td>
-              <td>{r.isOccupied ? "Sí" : "No"}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+      <RoomsTable />
+
     </Container>
   );
 };
