@@ -50,10 +50,7 @@ const Clients = () => {
             <th>Nombre</th>
             <th>DNI</th>
             <th>Email</th>
-            <th>Celular</th>
-            <th>Personas</th>
-            <th>Adultos</th>
-            <th>Niños</th>
+            
             <th>Habitación</th>
             <th>Acciones</th>
           </tr>
@@ -65,10 +62,7 @@ const Clients = () => {
               <td>{cliente.nombre}</td>
               <td>{cliente.dni}</td>
               <td>{cliente.email}</td>
-              <td>{cliente.celular}</td>
-              <td>{cliente.persons}</td>
-              <td>{cliente.adults}</td>
-              <td>{cliente.children}</td>
+              
               <td>{cliente.room}</td>
               <td>
                 <Link
