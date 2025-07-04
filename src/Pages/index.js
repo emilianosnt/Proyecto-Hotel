@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Header from '../Components/Header'
 const HomePage = () => {
@@ -8,4 +9,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default index
