@@ -1,10 +1,10 @@
 import React from 'react'
+import EditTable from '../Components/CRUD/EditTable.jsx'
 
 const EditPage = () => {
   return (
-    <div>
-      
-    </div>
+   
+      <EditTable/>
   )
 }
 

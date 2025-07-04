@@ -1,0 +1,43 @@
+{
+  "clientes": [
+    {
+      "id": "bbb8",
+      "nombre": "Pepito",
+      "dni": "3456789",
+      "email": "alfinanda@lpmqlp.com",
+      "celular": "3817013587",
+      "persons": 3,
+      "adults": 2,
+      "children": 1,
+      "room": "Habitacion 4"
+    },
+    {
+      "id": "4cc3",
+      "nombre": "ChatGpt",
+      "dni": "2134546544",
+      "email": "siiuuuuuu@lpm.com",
+      "celular": "38170135",
+      "persons": 3,
+      "adults": 2,
+      "children": 1,
+      "room": "Habitacion 2"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123"
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "password": "user123"
+    },
+    {
+      "id": "3",
+      "username": "user2",
+      "password": "user456"
+    }
+  ]
+}
