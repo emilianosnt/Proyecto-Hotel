@@ -1,0 +1,164 @@
+.contenedor {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.498), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/512882668/es/foto/ingresar-habitaci%C3%B3n-del-hotel.jpg?s=612x612&w=0&k=20&c=mHWqKOnoXdTSNdGA6XWbRXjkVGhFjKFmHVSN3uHzp4w=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  
+}
+.romms-table{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.498), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/1336116827/es/foto/maleta-entregada-de-pie-en-habitaci%C3%B3n-de-hotel-concepto-de-servicio-hotelero-y-viajes.jpg?s=612x612&w=0&k=20&c=eHlQbfpzVEODEn7mIAHrp19TG_tz3lmVhFWUiBhxb5E=');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh; 
+      width: 100vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto; 
+}
+.edit-table{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.498), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/1447180306/es/foto/mujer-disfruta-de-magn%C3%ADfica-vista-desde-la-ventana-del-hotel.jpg?s=612x612&w=0&k=20&c=Mja17aWbZPH65r9LlzCvytwYBNuj7wI2_Qrm2-vj3C8=');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh; 
+      width: 100vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto; 
+
+}
+.contenedor-tabla {/*tabla de habitaciones*/
+  background-color: rgba(255, 255, 255, 0.087);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.542);
+}
+
+.cabecera {
+  background-color: rgba(29, 48, 60, 0.8);
+  color: #F0C315;
+  padding: 10px;
+  text-align: center;
+  border-radius: 7px;
+  width: 100%;
+  position: relative;
+  
+}
+
+.cabecera h1 {
+  margin: 0;
+}
+
+.contenido {
+  margin-top: 80px; /* Ajusta el margen superior */
+  margin-bottom: 30px;
+  margin-top: 50px;
+  width: auto; /* Ajusta el ancho */
+  max-width: 1200px;
+  margin:  auto; /* Ajusta el margen */
+  background-color: rgba(255, 255, 255, 0.171);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Agrega un padding para que el contenido no se pegue a los bordes */
+  max-height: 100%; /* Ajusta el alto máximo */
+  overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+}
+
+.subtitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtitulo h2 {
+  margin: 0;
+}
+
+.botones-acciones {
+  margin-left: 20px;
+}
+
+.boton-accion {
+  background-color: #92a3aaa2;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 3px 10px;
+  border-radius: 5px;
+}
+
+.boton-accion:hover {
+  background-color: #E05F17;
+  color: white;
+  font-size: 20px;
+}
+
+.tabla-datos {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 20px;
+}
+
+.tabla-datos th, .tabla-datos td {
+  border: 1px solid #92A3AA;
+  padding: 20px;
+  text-align: left;
+}
+
+.tabla-datos th {
+  background-color: #1D303C;
+  color: #F0C315;
+}
+
+.boton-volver {
+  background-color: #92A3AA;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+.boton-editar:hover{
+    background-color: rgba(172, 255, 47, 0.492);
+    color: black;
+    border: none;
+    transform: scale(1.1);
+}
+.boton-ver:hover{
+    background-color: rgba(47, 154, 255, 0.492);
+    color: black;
+    transform: scale(1.1);   
+}
+.boton-elimiar:hover{
+    background-color: rgba(255, 120, 47, 0.492);
+    color: black;
+    transform: scale(1.1);
+}
+.boton-volver:hover {
+  background-color: #E05F17;
+  transform: scale(1.1);
+}

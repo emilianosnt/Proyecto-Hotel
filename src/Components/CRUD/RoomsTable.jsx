@@ -1,5 +1,9 @@
+ROOMSTABLE
+
 import { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
+import "../../CSS/Users.css";
+
 
 const RoomsTable = () => {
   const [rooms, setRooms] = useState([]);
@@ -12,11 +16,12 @@ const RoomsTable = () => {
   }, []);
 
   return (
-    <>
-      <h3>Habitaciones</h3>
-      <Table striped bordered hover>
+    <div>
+      <h3 className="cabecera">Habitaciones</h3>
+      <div className="contenedor-tabla">
+      <Table className="tabla-datos">
         <thead>
-          <tr>
+          <tr className="table-dark">
             <th>ID</th>
             <th>Nombre</th>
             <th>Camas Dobles</th>
@@ -41,7 +46,8 @@ const RoomsTable = () => {
           ))}
         </tbody>
       </Table>
-    </>
+      </div>
+    </div>
   );
 };
 

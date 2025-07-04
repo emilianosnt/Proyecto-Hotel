@@ -4,6 +4,8 @@ import axios from "axios";
 import { URL_CLIENTES } from "../Constants/EndPoint.js";
 import { useNavigate } from "react-router-dom";
 import RoomsTable from "./RoomsTable";
+import "../../CSS/Users.css";
+
 
 const initialRoomsData = [
   { id: 1, name: "Habitacion 1", doubleBed: 1, singleBed: 2, isOccupied: false },
@@ -84,8 +86,9 @@ const ClientsTable = () => {
   };
 
   return (
-    <Container className="mt-5">
-      <h2>Asignación y Registro de Cliente</h2>
+    <div className="romms-table">
+    <Container className="mt-5 contenedor-tabla">
+      <h2 className="cabecera">Asignación y Registro de Cliente</h2>
 
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
@@ -154,7 +157,7 @@ const ClientsTable = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="button" onClick={assignRoom}>
+        <Button className="boton-editar" type="button" onClick={assignRoom}>
           Asignar Habitación
         </Button>
 
@@ -169,7 +172,7 @@ const ClientsTable = () => {
           />
         </Form.Group>
 
-        <Button variant="success" type="submit">
+        <Button variant="success" type="submit" className="boton-accion">
           Guardar Cliente
         </Button>
       </Form>
@@ -178,6 +181,7 @@ const ClientsTable = () => {
       <RoomsTable />
 
     </Container>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { URL_CLIENTES } from '../Constants/EndPoint.js';
 import { useParams, useNavigate } from 'react-router-dom';
-import { CLIENTS } from '../../Routers/Router';
+import { CLIENTS } from '../../Routers/router.js';
 
 const EditTable = () => {
   const { id } = useParams();
@@ -52,8 +52,9 @@ const EditTable = () => {
   };
 
   return (
-    <Container className="mt-4">
-      <h2>Editar Cliente</h2>
+    <div className='romms-table edit-table'>
+    <Container className="mt-4 contenedor-tabla">
+      <h2 className='cabecera' >Editar Cliente</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Nombre</Form.Label>
@@ -141,7 +142,9 @@ const EditTable = () => {
         <Button variant="secondary" onClick={() => navigate(CLIENTS)}>Cancelar</Button>
       </Form>
     </Container>
+    </div>
   );
 };
 
 export default EditTable;
+

@@ -4,6 +4,7 @@ import axios from "axios";
 import { URL_CLIENTES } from "./Constants/EndPoint.js";
 import { Link, useNavigate } from "react-router-dom";
 import RoomsTable from "./CRUD/RoomsTable.jsx";
+import "../CSS/Users.css";
 
 const Clients = () => {
   const [datos, setDatos] = useState([]);
@@ -52,64 +53,72 @@ const Clients = () => {
   };
 
   return (
- <>
-    <Container className="my-4">
-      <h2 className="mb-4">Lista de Clientes</h2>
+    <div className="contenedor">
+      <main className="contenido contenedor-tabla">
+        <Container className="my-4">
+          <h2 className="cabecera mb-4">Lista de Clientes</h2>
 
-      <div className="d-flex justify-content-end mb-3">
-        <Link to="/Create" className="btn btn-success btn-sm">
-          Crear Cliente
-        </Link>
-      </div>
+          <div className="d-flex justify-content-end mb-">
+            <Link to="/Create" className="btn btn-success btn-sm">
+              Crear Cliente
+            </Link>
+          </div>
+          <div className="contenido contenedor-tabla">
+          <Table className="tabla-datos">
+            <thead>
+              <tr className="table-dark">
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Email</th>
+                <th>Habitación</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
 
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>DNI</th>
-            <th>Email</th>
-            <th>Habitación</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {datos.map((cliente) => (
-            <tr key={cliente.id}>
-              <td>{cliente.nombre}</td>
-              <td>{cliente.dni}</td>
-              <td>{cliente.email}</td>
-              <td>{cliente.room}</td>
-              <td>
-                <Link
-                  to={`/edit/${cliente.id}`}
-                  className="btn btn-primary btn-sm me-2"
-                >
-                  Editar
-                </Link>
-                <Link
-                  to={`/view/${cliente.id}`}
-                  className="btn btn-warning btn-sm me-2"
-                >
-                  Ver
-                </Link>
-                <Button
-                  variant="danger"
-                  size="sm"
-                  onClick={() => Borrar(cliente)}
-                >
-                  Eliminar
-                </Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-     
-
-    </Container>
-      <RoomsTable />
-    </>
+            <tbody>
+              {datos.map((cliente) => (
+                <tr key={cliente.id}>
+                  <td>{cliente.nombre}</td>
+                  <td>{cliente.dni}</td>
+                  <td>{cliente.email}</td>
+                  <td>{cliente.room}</td>
+                  <td>
+                    <div>
+                      <Link
+                        to={`/edit/${cliente.id}`}
+                        className="boton-editar btn-sm me-2 boton-accion"
+                      >
+                        Editar
+                      </Link>
+                      <Link
+                        to={`/view/${cliente.id}`}
+                        className="boton-ver btn-sm me-2 boton-accion"
+                      >
+                        Ver
+                      </Link>
+                      <button
+                        className="boton-elimiar btn-sm me-2 boton-accion"
+                        onClick={() => Borrar(cliente)}
+                      >
+                        Eliminar
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          </div>
+        </Container>
+        <button
+          className="boton-volver  mb-4"
+          onClick={() => navigate(-1)} // vuelve a la página anterior
+        >
+          Volver
+        </button>
+        <RoomsTable />
+      </main>
+    </div>
   );
 };
 

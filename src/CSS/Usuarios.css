@@ -1,0 +1,108 @@
+/* Usuarios.css */
+.contenedor {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.498), rgba(0, 0, 0, 0.5)), url('../imges/fondo-us-usadmin.png');
+  background-size: cover;
+  background-position: center;
+  /*padding: 20px;*/
+  height: 100vh; /* Ocupa todo el alto del viewport */
+  width: 100vw; /* Ocupa todo el ancho del viewport */
+  position: relative;
+  
+}
+.contenedor-tabla {
+  background-color: rgba(255, 255, 255, 0.087);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.542);
+}
+
+.cabecera {
+  background-color: rgba(29, 48, 60, 0.8);;
+  color: #F0C315;
+  padding: 10px;
+  text-align: center;
+  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cabecera h1 {
+  margin: 0;
+}
+
+.contenido {
+  padding: 20px;
+  width: 90%; /* Ajusta el ancho */
+  max-width: 800px; /* Ajusta el ancho máximo */
+  background-color: rgba(255, 255, 255, 0.171); /* Ajusta el fondo */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px; /* Ajusta el margen superior para evitar que se superponga con la cabecera */
+
+}
+
+.subtitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtitulo h2 {
+  margin: 0;
+}
+
+.botones-acciones {
+  margin-left: 20px;
+}
+
+.boton-accion {
+  background-color: #92A3AA;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.boton-accion:hover {
+  background-color: #E05F17;
+}
+
+.tabla-datos {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla-datos th, .tabla-datos td {
+  border: 1px solid #92A3AA;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-datos th {
+  background-color: #1D303C;
+  color: #F0C315;
+}
+
+.boton-volver {
+  background-color: #92A3AA;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.boton-volver:hover {
+  background-color: #E05F17;
+  transform: scale(1.1);
+}
