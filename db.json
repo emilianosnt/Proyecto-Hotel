@@ -1,0 +1,43 @@
+{
+  "clientes": [
+    {
+      "id": "2154",
+      "nombre": "pri",
+      "dni": "46278111",
+      "email": "priscilaolariaga25@gmail.com",
+      "celular": "3815012026",
+      "adults": 2,
+      "children": 1,
+      "persons": 3,
+      "room": "Habitacion 1"
+    },
+    {
+      "id": "2c7e",
+      "nombre": "Blas Sebastian Lescano",
+      "dni": "43227437",
+      "email": "lescanoblassebastian@gmail.com",
+      "celular": "3812182050",
+      "adults": 2,
+      "children": 2,
+      "persons": 4,
+      "room": "Habitacion 1"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123"
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "password": "user123"
+    },
+    {
+      "id": "3",
+      "username": "user2",
+      "password": "user456"
+    }
+  ]
+}
