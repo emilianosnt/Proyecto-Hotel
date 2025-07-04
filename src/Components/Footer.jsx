@@ -1,6 +1,7 @@
+
 import React from "react";
-import {FaInstagram,FaFacebookF,FaEnvelope, FaWhatsapp,} from "react-icons/fa";
-import "../Components/Footer.css";
+import {FaInstagram,FaFacebookF, FaEnvelope,FaWhatsapp,} from "react-icons/fa";
+import "..Components/Footer.css"; 
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
           HOTEL CALIFORNIA
         </h2>
         <div
-          style={{ fontSize: "24px", color: "#FFD700", textAlign: "center" }}
+          style={{ fontSize: "24px", color: "#DEB887", textAlign: "center" }}
         >
           ⭐⭐⭐⭐⭐
         </div>
@@ -27,12 +28,10 @@ const Footer = () => {
             <img
               width="100%"
               height="500"
-              src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_213,w_3000,h_1687,r_0,c_crop,q_80,fl_progressive/w_910,f_auto,c_fit/hotel-southern-star-mysuru/Mysore_Hotel_New_Photographs_(4)"
+              src="https://scontent.ftuc7-1.fna.fbcdn.net/v/t39.30808-6/515065510_4008862962687400_673786367202197877_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHP7doZLXxpA20elrk8A-KY14CLtG2MjEfXgIu0bYyMRxtogm3vfuA-8qm-08mdBgAH6Oj96T7zYCpWpO_XJ9rx&_nc_ohc=e8oEXTsC6oQQ7kNvwFe2ufU&_nc_oc=AdmFd6HDJ3-nErOOS97Aa_SBcDzKTeEKWumgSV6iSZN4k4sElE89v7OFIbyHyEMKPLE&_nc_zt=23&_nc_ht=scontent.ftuc7-1.fna&_nc_gid=57Xp4GZyFRWDs64Ving-Lg&oh=00_AfMsrz8Q0lQZ8JO-LzdS4W3qw9LEkjYgzYalAVCxjd4KqQ&oe=686E1BDE"
             />
           </div>
           <div className="map-section">
-            <h2 style={{ textAlign: "center" }}>Encuentranos</h2>
-
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0123456789!2d-65.227654321!3d-26.823456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9424a123456789ab%3A0xcdef0123456789ab!2sSan+Miguel+de+Tucum%C3%A1n%2C+Tucum%C3%A1n%2C+Argentina!5e0!3m2!1ses!2sus!4v1234567890123!5m2!1ses!2sus"
               allowFullScreen=""
@@ -40,6 +39,11 @@ const Footer = () => {
               referrerPolicy="no-referrer-when-downgrade"
               width="100%"
               height="500"
+            ></iframe>
+            <iframe
+              src="https://open.spotify.com/embed/track/40riOy7x9W7GXjyGp4pjAv?utm_source=generator&theme=0"
+              allow="autoplay 1; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
