@@ -1,49 +1,38 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { URL_USUARIOS } from "../Components/Constants/EndPoint";
 import { useNavigate } from "react-router-dom";
-import { HOME } from "../Routers/router";
+import { ADMIN } from "../Routers/Router";
 import "../CSS/Login.css";
+
+const API_URL = "http://localhost:3000";
 
 function Login() {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
-  const [datos, setDatos] = useState([]);
-
   const userNavigate = useNavigate();
 
-  const getUsuarios = async () => {
-    try {
-      const response = await axios.get(URL_USUARIOS);
-      setDatos(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error al obtener los usuarios:", error);
-    }
-  };
-
-  useEffect(() => {
-    getUsuarios();
-  }, []);
-
-  const manejarEnvio = (e) => {
+  const manejarEnvio = async (e) => {
     e.preventDefault();
-    const usuarioEncontrado = datos.find(
-      (user) => user.username === usuario && user.password === password
-    );
-    if (usuarioEncontrado) {
+    try {
+      const response = await axios.post(`${API_URL}/api/usuarios/login`, {
+        usuario: usuario,
+        contraseña: password,
+      });
+
+      const usuarioEncontrado = response.data;
+      localStorage.setItem('usuario-logeado', JSON.stringify(usuarioEncontrado));
       alert("Inicio de sesión exitoso");
-      userNavigate(HOME);
-    } else {
-      alert("Usuario o contraseña incorrectos");
+      userNavigate(ADMIN);
+    } catch (error) {
+      console.error("Error en el inicio de sesión:", error);
+      alert(error.response?.data?.error || "Usuario o contraseña incorrectos");
     }
-    // Aquí podrías comparar con los datos obtenidos en getUsuarios()
   };
 
   return (
     <div className="login-container">
       <div className="login-header">
-        <h1>HOTEL CALIFORNIA</h1>
+        <h1>HOTEL CALIFORNIA</h1> 
       </div>
       <form onSubmit={manejarEnvio}>
         <div className="form-group">

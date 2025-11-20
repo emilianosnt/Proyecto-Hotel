@@ -1,9 +1,8 @@
-import React from 'react'
-import Clients from '../Components/Clients.jsx'    
+import ClientsTable from '../Components/CRUD/ClientsTable.jsx' 
 const ClientsPage = () => {
   return (
     <div>
-      <Clients />
+      <ClientsTable />
     </div>
   )
 }

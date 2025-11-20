@@ -1,46 +1,71 @@
-import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { FaUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { HOME, LOGIN, ADMIN, HABITACIONES_CLIENTE } from '../Routers/Router';
 import "../CSS/Header.css";
 
-const Header = () => (
-  <Navbar expand="lg" variant="dark" className="Header">
-    <Container fluid className="position-relative">
-      <Nav className="navbar-brand mx-auto brand-centered">
-        Hotel California
-      </Nav>
+const Header = () => {
+  const [usuarioLogeado, setUsuarioLogeado] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-      <Navbar.Toggle aria-controls="navbarScroll" />
-      <Navbar.Collapse id="navbarScroll">
-        <Nav className="me-auto">
-          <Link to="/" className="nav-link">
-            Inicio
-          </Link>
-          <NavDropdown title="Menú" id="navbarMenu">
-            <Link to="/Clients" className="dropdown-item">
-              Historial de Clientes
-            </Link>
-            <Link to="/Create" className="dropdown-item">
-              Reservar
-            </Link>
-          </NavDropdown>
-        </Nav>
+  useEffect(() => {
+    const usuario = localStorage.getItem('usuario-logeado');
+    if (usuario) {
+      setUsuarioLogeado(JSON.parse(usuario));
+    } else {
+      setUsuarioLogeado(null);
+    }
+  }, [location]);
 
-        <Nav className="ms-auto align-items-center">
-          <NavDropdown
-            title={<FaUser size={23} />}
-            id="navbarUsuario"
-            align="end"
-          >
-            <Link to="/login" className="dropdown-item">
-              Iniciar sesión
+  const handleLogout = () => {
+    localStorage.removeItem('usuario-logeado');
+    setUsuarioLogeado(null);
+    navigate(LOGIN);
+    alert('Sesión cerrada exitosamente.');
+  };
+
+  return (
+    <header>
+      <div className="container">
+        {usuarioLogeado && location.pathname.startsWith('/admin') && (
+            <span className="material-symbols-outlined">menu</span>
+        )}
+        <Link to={HOME} className="header-title-link">
+          <img src="/Images/hotel-logo.png" alt="Hotel California Logo" className="header-logo" />
+        </Link>
+
+        <nav className="header-nav">
+          <div className="header-nav-links">
+            <Link to="/" className="header-link">
+              Inicio
             </Link>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-);
+          </div>
+          <div className="header-user-actions">
+            {usuarioLogeado ? (
+              <>
+                <button className="header-button welcome-button" disabled>
+                  Hola, {usuarioLogeado.usuario}
+                </button>
+                <Link to={HABITACIONES_CLIENTE} className="header-link">
+                  Nuestras Habitaciones
+                </Link>
+                <Link to={ADMIN} className="header-button admin-button">
+                  Administración
+                </Link>
+                <button onClick={handleLogout} className="header-button logout-button">
+                  Cerrar Sesión
+                </button>
+              </>
+            ) : (
+              <Link to={LOGIN} className="header-button login-button">
+                Iniciar Sesión
+              </Link>
+            )}
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

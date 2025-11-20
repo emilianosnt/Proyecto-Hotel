@@ -16,7 +16,7 @@ const ViewTable = () => {
         const response = await axios.get(`${URL_CLIENTES}/${id}`);
         setCliente(response.data);
       } catch (error) {
-        console.error("Error al obtener el cliente:", error);
+        
       }
     };
     getCliente();

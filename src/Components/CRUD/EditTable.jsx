@@ -26,7 +26,7 @@ const EditTable = () => {
         const response = await axios.get(`${URL_CLIENTES}/${id}`);
         setDatos(response.data);
       } catch (error) {
-        console.error("Error al obtener el cliente:", error);
+        
       }
     };
     getCliente();
@@ -47,7 +47,7 @@ const EditTable = () => {
         navigate(CLIENTS);
       }
     } catch (error) {
-      console.error("Error al actualizar el cliente:", error);
+      
     }
   };
 

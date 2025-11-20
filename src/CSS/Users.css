@@ -1,12 +1,19 @@
 .contenedor {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.498), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/512882668/es/foto/ingresar-habitaci%C3%B3n-del-hotel.jpg?s=612x612&w=0&k=20&c=mHWqKOnoXdTSNdGA6XWbRXjkVGhFjKFmHVSN3uHzp4w=');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   position: relative;
-  padding: 40px;
-  margin-bottom: 40px;
-  border-radius: 20px;
+  padding-top: 100px;
+}
+.contenedor-tabla {
+  background-color: rgba(255, 255, 255, 0.087);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.542);
+  overflow-x: auto;
 }
 
 .cabecera {
@@ -24,17 +31,20 @@
 }
 
 .contenido {
-  margin-top: 30px;
+  padding-top: 170px;
+  margin-top: 200px;
   margin-bottom: 30px;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
-  margin: 0 auto 0 auto; /* antes: margin: 120px auto 0 auto; */
+  margin: 50px auto 30px auto;
   background-color: rgba(255, 255, 255, 0.171);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  max-height: 100%;
 }
 
 .subtitulo {
@@ -88,6 +98,10 @@
   color: #F0C315;
 }
 
+.tabla-datos tr:nth-child(even) {
+  background-color: rgba(47, 27, 20, 0.05);
+}
+
 .boton-volver {
   background-color: #92A3AA;
   border: none;
@@ -109,7 +123,7 @@
 .boton-ver:hover{
     background-color: rgba(47, 154, 255, 0.492);
     color: black;
-    transform: scale(1.1);   
+    transform: scale(1.1);
 }
 .boton-elimiar:hover{
     background-color: rgba(255, 120, 47, 0.492);

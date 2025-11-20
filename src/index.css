@@ -1,34 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
-  margin-top:0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  height: 100%;
-  width: 100vw;
-  margin: 0;
+  /* CAMBIO CLAVE: min-height en lugar de height */
+  min-height: 100%; 
+  margin: 0 !important;
   padding: 0;
+  box-sizing: border-box;
+  top: 0;
   font-size: 18px;
   font-family: Georgia, serif;
 }
 
 body {
-  height: 100%;
-  width: 100vw;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* CAMBIO CLAVE: Usa min-height: 100vh para que ocupe al menos toda la ventana */
+  min-height: 100vh;
+  /* CAMBIO AÑADIDO: permite que crezca si el contenido excede la ventana */
+  height: auto; 
+  margin: 0 !important;
   padding: 0;
   font-family: 'Georgia', serif;
-  background-color: #DEB887;
+  background-color: #fcd29c;
+  color: #2F1B14;
   font-size: 18px;
   overflow-x: hidden;
 }
 
 #root,
 #__next {
-  height: 100%;
-  width: 100vw;
+  flex-grow: 1;
+  /* CAMBIO CLAVE: Elimina la altura fija para que se ajuste al contenido real */
+  height: auto; 
   margin: 0;
   padding: 0;
+}
+
+.app-button {
+  background: linear-gradient(#8B4513, #A0522D);
+  color: white;
+  border: none;
+  height: 50px;
+  width: 100%;
+  margin-left: 0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.7s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  text-transform: uppercase;
+}
+
+.app-button:hover {
+  background: linear-gradient(135deg, #A0522D, #CD853F);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
 }

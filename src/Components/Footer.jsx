@@ -1,139 +1,85 @@
-import React from "react";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaEnvelope,
-  FaWhatsapp,
-} from "react-icons/fa";
 import "../CSS/Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer-banner">
-        ¡Bienvenido! Aqui podrás encontrar la información clave sobre el Hotel
-      </div>
-
-      <div className="footer-content">
-        <h2 className="footer-title" style={{ textAlign: "center" }}>
-          HOTEL CALIFORNIA
-        </h2>
-        <div
-          style={{ fontSize: "24px", color: "#FFD700", textAlign: "center" }}
-        >
-          ⭐⭐⭐⭐⭐
-        </div>
-      </div>
-
-      <div className="footer-content">
-        <div className="media-section">
-          <div className="footer-pasillo">
-            <h2 style={{ textAlign: "center" }}></h2>
-            <img
-              width="100%"
-              height="500"
-              src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_213,w_3000,h_1687,r_0,c_crop,q_80,fl_progressive/w_910,f_auto,c_fit/hotel-southern-star-mysuru/Mysore_Hotel_New_Photographs_(4)"
-            />
+    <footer>
+      <div className="container">
+        <div className="grid">
+          <div className="about-us">
+            <h3>Hotel California</h3>
+            <p>
+              Tu hogar lejos de casa. Lujo, confort y servicio excepcional te
+              esperan.
+            </p>
+            <div className="social-links">
+              <a aria-label="Ícono de Facebook" href="#">
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    fillRule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <a aria-label="Ícono de Instagram" href="#">
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"
+                    fillRule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <a aria-label="Ícono de Twitter" href="#">
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-          <div className="map-section">
-            <h2 style={{ textAlign: "center" }}>Encuentranos</h2>
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0123456789!2d-65.227654321!3d-26.823456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9424a123456789ab%3A0xcdef0123456789ab!2sSan+Miguel+de+Tucum%C3%A1n%2C+Tucum%C3%A1n%2C+Argentina!5e0!3m2!1ses!2sus!4v1234567890123!5m2!1ses!2sus"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              width="100%"
-              height="500"
-            ></iframe>
+          <div>
+            <h3>Contacto</h3>
+            <ul className="link-list">
+              <li>Av. Principal 123, Ciudad</li>
+              <li>+54 (381) 123-4567</li>
+              <li>soporte@hotelcalifornia.com</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Enlaces</h3>
+            <ul className="link-list">
+              <li>
+                <a href="#">Galería</a>
+              </li>
+              <li>
+                <a href="#">Ofertas Especiales</a>
+              </li>
+              <li>
+                <a href="#">Política de Privacidad</a>
+              </li>
+              <li>
+                <a href="#">Términos de Servicio</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <div>
-        <div className="galeria">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1726862460195-61c9f6ebdee9?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Limpieza"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1616363088386-31c4a8414858?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="estacionamiento"
-          />
-          <img
-            src="https://plus.unsplash.com/premium_photo-1723291340092-2eb79b9b878a?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="pers buffet"
-          />
-          <img
-            src="https://media.istockphoto.com/id/1939516721/photo/relax-sleep-and-woman-at-spa-for-massage-beauty-service-or-aromatherapy-for-holistic.jpg?s=1024x1024&w=is&k=20&c=Xf_Jtdem0eCqnMLGbSvvV6zYUV3PxZqbDt-JcyogyQY="
-            alt="spa"
-          />
-          <img
-            src="https://media.istockphoto.com/id/2063279233/photo/electronic-card-key-for-open-door-in-hotel-smart-card-key-to-lock-and-unlock-door-security.jpg?s=1024x1024&w=is&k=20&c=_5RdCILkWn9SeRZbwvJvbiQ5TH-jBQlv-zblzIsveKQ="
-            alt="puerta"
-          />
-          <img
-            src="https://tse3.mm.bing.net/th/id/OIP.FKo2--v1dUdQNrH3Rt_-aQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Imagen de Hab"
-          />
-          <img
-            src="https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?q=80&w=1020&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Ingreso"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1534679541758-8dc76ff8081d?q=80&w=908&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Comedor"
-          />
-          <img
-            src="https://media.istockphoto.com/id/2188358193/photo/family-having-breakfast-in-hotel.jpg?s=1024x1024&w=is&k=20&c=-CFTOGodDNaK5WMGwqSBR_LVf3PJqnbqLflIirJcCk8="
-            alt="Buffet"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Piscina"
-          />
+        <div className="copyright">
+          <p>© 2025 Hotel California. Todos los derechos reservados.</p>
         </div>
       </div>
-
-      <p className="footer-contact">CONTACTO Y REDES SOCIALES</p>
-
-      <div className="footer-socials">
-        <a
-          href="https://www.instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="https://www.facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
-          <FaFacebookF />
-        </a>
-        <a href="mailto:contacto@hotelcalifornia.com" aria-label="Email">
-          <FaEnvelope />
-        </a>
-        <a
-          href="http://wa.me/543815012026"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-link"
-          aria-label="WhatsApp"
-        >
-          <FaWhatsapp fontSize={40} />
-        </a>
-      </div>
-      <hr />
-
-      <div className="footer-copyright">
-        © 2025 Hotel California. Todos los derechos reservados. <br />
-        Prohibida la reproducción total o parcial sin permiso.
-      </div>
-    </div>
+    </footer>
   );
 };
 
