@@ -1,0 +1,74 @@
+.sidebar {
+    width: 260px;
+    background-color: #1a202c; /* Mismo fondo que el admin */
+    border-right: 1px solid #4a5568;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px); /* Resta la altura de la barra superior */
+    margin-bottom: 0px;
+}
+
+
+.sidebar-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    padding-top: 1rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #e2e8f0; /* Texto claro */
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.sidebar-link:hover {
+    background-color: #2d3748; /* Fondo más claro al pasar el ratón */
+    color: #ffffff;
+}
+
+.sidebar-link-text {
+    font-size: 1rem;
+}
+
+/* Estilo para el enlace activo */
+.sidebar-link.active {
+    background-color: #3b82f6; /* Color azul para resaltar */
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: calc(100% - 2rem); /* Ajusta el ancho para que coincida con los links */
+    font-family: inherit; /* Hereda la fuente del resto de la app */
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #c53030; /* Un color rojo para indicar una acción de salida */
+    color: #ffffff;
+}
+
+.sidebar-logout-button {
+    font-size: 1rem;
+}

@@ -1,0 +1,21 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.admin-body {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+
+.admin-layout-content {
+  flex-grow: 1;
+  overflow-y: auto; /* Permite scroll solo en el contenido */
+  background-color: #1a202c;
+  height: auto; /* Ocupa toda la altura de la ventana */
+  padding: 2rem; /* Mantiene el padding interno */
+}
