@@ -39,7 +39,7 @@ const HabitacionesCliente = () => {
       servicios: [
         { icon: <FaBed />, text: "Cama King" },
         { icon: <FaWifi />, text: "Wifi Premium" },
-        { icon: <FaTv />, text: "Smart TV 55'" },
+        { icon: <FaTv/>, text: "Smart TV 55'" },
         { icon: <FaBath />, text: "Bañera" },
       ],
     },
@@ -47,7 +47,7 @@ const HabitacionesCliente = () => {
  
   return (
     <div>
-      <Header />
+      <Header/>
       <div className="habitaciones-cliente-container">
         <div className="main">
           <video src="/Images/Hotel_California.mp4" autoPlay loop muted className="background-video" />
@@ -83,7 +83,7 @@ const HabitacionesCliente = () => {
           Reservar Ahora
         </Link>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 };
